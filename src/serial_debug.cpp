@@ -31,9 +31,8 @@
  * SOFTWARE.
 **********************************************************************************/
 #include <Arduino.h>
-#include <serial_debug.h>
+#include "serial_debug.h"
 
-#ifdef SERIAL_DEBUG_ENABLE
 
 Stream& Debug::getSerial()
 {
@@ -73,7 +72,7 @@ void Debug::debugTime()
 	this->DEBUGLN();
 }
 
-void Debug::debugTimeBreak(char* messageReceive, uint32_t timeout)
+void Debug::debugReceiveTimeout(char* messageReceive, uint32_t timeout)
 {
 	this->DEBUGLN(messageReceive);
 	unsigned long tempTimeNowInMillis = millis(); 
@@ -99,7 +98,4 @@ void Debug::debugTimeBreak(char* messageReceive, uint32_t timeout)
 	this->DEBUGLN();
 }
 
-#else
-//NONE
-#endif
 	

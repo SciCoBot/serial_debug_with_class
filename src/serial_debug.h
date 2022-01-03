@@ -31,12 +31,8 @@
  * SOFTWARE.
 **********************************************************************************/
 
-#ifndef SERIAL_DEBUG.h
-#define SERIAL_DEBUG
-
-#define SERIAL_DEBUG_ENABLE 
-
-#ifdef SERIAL_DEBUG_ENABLE
+#ifndef SERIAL_DEBUG_H
+#define SERIAL_DEBUG_H
 
 #define DEBUG getSerial().print
 
@@ -62,8 +58,8 @@
   object.DEBUGLN();                                 \
 }
 
-#define PRINTVARIABLE(variableName, variable, object){            \
- object.DEBUG(variableName);                            \
+#define PRINTVARIABLE(variable, object){            \
+ object.DEBUG(#variable);                            \
  object.DEBUG(": ");                                  \
  object.DEBUGLN(variable);                              \
  object.DEBUGLN();                              \
@@ -76,15 +72,11 @@ class Debug{
 		void debugTime(); 
 		Debug(Stream& serial):_serial(serial){}
 		Stream& getSerial();                                                         
-		void debugTimeBreak(char* messageReceive = "Waiting a message...", uint32_t timeout = 5000);
+		void debugReceiveTimeout(char* messageReceive = "Waiting a message...", uint32_t timeout = 5000);
 		
 	private:
 		Stream& _serial;
 	
-	#else
-	//NONE
-	
-#endif
 };
 
-#endif	
+#endif //SERIAL_DEBUG_H
