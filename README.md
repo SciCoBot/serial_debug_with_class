@@ -3,7 +3,7 @@
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SciCoBot/serial_debug/blob/main/LICENSE)
 
 
-## Contents
+## Conteúdo
 
 - [Sobre](#sobre)
 - [Comandos Básicos](#comandos-básicos)
