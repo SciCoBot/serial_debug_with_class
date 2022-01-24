@@ -34,7 +34,7 @@ Para executar as macros é necessária uma instância da classe Debug.
 - **Debug::debugTimeBreak:** espera (por default 5 segundos) receber uma mensagem serial e, ao receber, envia a mensagem via serial, que por sua vez, pode ser visualizada em serial monitor.
 
 ## Modo de Usar
-Instancie um objeto da classe Debug, passe como parametro a Serial que se deseja utilizar:
+Instancie um objeto da classe Debug, passe como parametro a Serial que deseja utilizar (SERIAL1, SERIAL2, SERIAL3):
 
 ```c
 Debug debug(Serial1);
