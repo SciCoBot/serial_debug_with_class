@@ -1,4 +1,4 @@
-#include<serial_debug1.h>
+#include<serial_debug_class.h>
 
 Debug debugObj(Serial);
 

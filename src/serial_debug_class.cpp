@@ -1,5 +1,5 @@
 /***********************************************************************************
- *  @file       serialDebug.cpp
+ *  @file       serial_debug_class.cpp
  *  Project     serial_debug
  *  @brief      Arduino Due library with functions and macros to help debug code.
  *
@@ -31,7 +31,7 @@
  * SOFTWARE.
 **********************************************************************************/
 #include <Arduino.h>
-#include "serial_debug.h"
+#include "serial_debug_class.h"
 
 
 Stream& Debug::getSerial()
