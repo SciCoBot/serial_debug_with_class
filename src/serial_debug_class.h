@@ -31,8 +31,8 @@
  * SOFTWARE.
 **********************************************************************************/
 
-#ifndef SERIAL_DEBUG_H
-#define SERIAL_DEBUG_H
+#ifndef SERIAL_DEBUG_CLASS_H
+#define SERIAL_DEBUG_CLASS_H
 
 #define DEBUG getSerial().print
 
@@ -79,4 +79,4 @@ class Debug{
 	
 };
 
-#endif //SERIAL_DEBUG_H
+#endif //SERIAL_DEBUG_CLASS_H
